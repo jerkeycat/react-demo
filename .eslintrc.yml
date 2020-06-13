@@ -1,3 +1,4 @@
+root: true
 env:
   browser: true
   es6: true
@@ -19,6 +20,14 @@ parserOptions:
   ecmaVersion: 2018
   sourceType: module
 plugins:
-  - react
   - '@typescript-eslint'
-rules: {}
+  - import
+rules:
+  'import/order':
+    - warn
+    - newlines-between: always
+  'import/no-deprecated': error
+  'import/prefer-default-export': off
+  '@typescript-eslint/explicit-function-return-type': off
+  'no-unused-vars': off
+  '@typescript-eslint/no-unused-vars': ["off"]
